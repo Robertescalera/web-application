@@ -5,17 +5,18 @@ metadata:
   labels:
     app: nginx
 spec:
-  type: LoadBalancer
+  type: NodePort  # Changed to NodePort
   ports:
     - port: 80
       targetPort: 80
+      nodePort: 30080   # Optionally specify the port
   selector:
     app: nginx
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-activity-robertescalera  
+  name: k8s-activity-robertescalera
   labels:
     app: nginx
 spec:
