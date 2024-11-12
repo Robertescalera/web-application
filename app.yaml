@@ -15,7 +15,7 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-activity-Robertescalera
+  name: k8s-activity-robertescalera  # Changed to lowercase
   labels:
     app: nginx
 spec:
